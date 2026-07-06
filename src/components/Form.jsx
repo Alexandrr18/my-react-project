@@ -4,10 +4,10 @@ import { useState } from "react";
 function Form({onAddTask}) {
 
     const [task, setTask] = useState('');
-    const eventChange = (e) => {
+    const onChange = (e) => {
         setTask(e.target.value)
     }
-    const eventClick = () => {
+    const onClick = () => {
         if (task) {
             onAddTask(task);
             setTask('')
@@ -19,9 +19,9 @@ function Form({onAddTask}) {
             type="text"
             placeholder="Добавить задачу"
             value={task}
-            onChange={eventChange}
+            onChange={onChange}
             />
-            <button onClick={eventClick}>Добавить задачу</button>
+            <button onClick={onClick}>Добавить задачу</button>
         </div>
     )
 }
